@@ -4,6 +4,7 @@ python: "3.8"
 dist: xenial
 compiler:
   - gcc
+  - clang
 install:
   # Install conan
   - pip install conan
