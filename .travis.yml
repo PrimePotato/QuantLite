@@ -9,7 +9,8 @@ before_install:
   - docker ps -a
 install:
   # Download conan
-  - sudo pip install --upgrade conan
+  - sudo pip --version
+  - pip install --upgrade conan
   # Automatic detection of your arch, compiler, etc
   - conan user
 
