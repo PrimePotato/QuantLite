@@ -3,8 +3,8 @@ language: cpp
 services:
   - docker
 before_install:
-  - docker pull gcc
-  - docker run gcc
+  - docker pull conanio/gcc5
+  - docker run conanio/gcc5
   - docker ps -a
 install:
   # Download conan
