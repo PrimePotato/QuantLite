@@ -4,16 +4,16 @@ from conans import CMake
 
 class ConanGTestExample(ConanFile):
     """Build Conan GTest Example"""
-    name = "conan-gtest-example"
+    name = "ql-gtest-example"
     version = "0.1.0"
     url = "https://github.com/uilianries/conan-gtest-example"
-    author = "lasote"
+    author = "primepotato"
     license = "MIT"
     settings = "os", "arch", "compiler", "build_type"
     generators = "cmake"
     exports = "*"
     description = "Google Test example of use for conan.io"
-    requires = "OpenSSL/1.0.2o@conan/stable"
+    requires = "gtest/[~=1.10.0]", "boost/[~=1.74.0]", "yaml-cpp/[~=0.6.3]"
     options = {"shared": [True, False]}
     default_options = "shared=False"
 
@@ -32,4 +32,4 @@ class ConanGTestExample(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["encrypter"]
+        self.cpp_info.libs = ["QUANT_LITE"]
